@@ -17,7 +17,7 @@ export function Navigator() {
   ]
 
   return (
-    <nav className="fixed right-4 top-1/2 z-20 -translate-y-1/2">
+    <nav className="pointer-events-auto fixed right-4 top-1/2 z-20 -translate-y-1/2">
       <ul className="flex flex-col gap-1">
         {items.map((it) => {
           const isActive = active === it.station
@@ -25,7 +25,7 @@ export function Navigator() {
             <li key={it.station}>
               <button
                 onClick={() => scrollTo(it.station)}
-                className="group flex w-full items-center justify-end gap-2.5 py-1"
+                className="group flex w-full cursor-pointer items-center justify-end gap-2.5 py-1"
                 title={it.label}
               >
                 <span
