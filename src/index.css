@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #05060a;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #e6eaf2;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* The drei ScrollControls scroll container — keep its scrollbar subtle. */
+.scroll-host::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@layer utilities {
+  .chip {
+    @apply inline-flex items-center rounded-sm border border-white/10 bg-white/[0.04] px-2 py-[3px] font-mono text-[11px] leading-none text-ink/90;
+  }
+  .scrim {
+    background: linear-gradient(
+      135deg,
+      rgba(10, 13, 22, 0.82),
+      rgba(5, 6, 10, 0.72)
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
